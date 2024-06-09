@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/shared-types.ts"],
+  "sourcesContent": ["// These types are shared in ESM and CJS builds.\n// Do not import anything from subfolders here to avoid\n// affecting the files generated in the CJS build.\n\nimport type { IncomingMessage, ServerResponse } from 'http'\n\nimport type { SessionStorageAdapter } from './foundation/session/session-types'\n\nexport interface RuntimeContext {\n  waitUntil: (fn: Promise<any>) => void\n}\n\nexport interface RequestHandlerOptions {\n  indexTemplate: string | ((url: string) => Promise<string | { default: string }>)\n  cache?: Cache\n  streamableResponse?: ServerResponse\n  dev?: boolean\n  context?: RuntimeContext\n  nonce?: string\n  buyerIpHeader?: string\n  sessionApi?: SessionStorageAdapter\n  headers?: Headers\n}\n\nexport interface RequestHandler {\n  (request: Request | IncomingMessage, options: RequestHandlerOptions): Promise<\n    Response | undefined\n  >\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
+  "names": []
+}

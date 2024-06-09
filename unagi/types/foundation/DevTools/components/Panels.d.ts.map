@@ -1,0 +1,1 @@
+{"version":3,"file":"Panels.d.ts","sourceRoot":"","sources":["../../../../src/foundation/DevTools/components/Panels.tsx"],"names":[],"mappings":"AAAA,OAAc,EAAE,cAAc,EAAuB,MAAM,OAAO,CAAA;AAGlE,OAAO,EAAE,WAAW,EAAE,MAAM,yBAAyB,CAAA;AAErD,MAAM,WAAW,KAAK;IACpB,WAAW,EAAE,cAAc,CAAC,OAAO,WAAW,CAAC,CAAA;CAChD;AAwBD,wBAAgB,MAAM,CAAC,EAAE,EAAE,KAAK,eAgF/B"}

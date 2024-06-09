@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/ServerRequestProvider/index.ts"],
+  "sourcesContent": ["export * from './ServerRequestProvider.js'\n"],
+  "mappings": "AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/DevTools/DevTools.server.tsx"],
+  "sourcesContent": ["import React from 'react'\n\nimport { getLocale } from '../../utilities/locale/index.js'\nimport { useServerRequest } from '../ServerRequestProvider/index.js'\nimport { DevTools as DevToolsClient } from './DevTools.client.js'\n\nexport function DevTools() {\n  const serverRequest = useServerRequest()\n  const { shopifyConfig } = serverRequest.ctx\n  const {\n    defaultLanguageCode: languageCode,\n    defaultCountryCode: countryCode,\n    storeDomain,\n    storefrontApiVersion,\n  } = shopifyConfig || {}\n  const settings = {\n    locale: getLocale(languageCode, countryCode),\n    storeDomain,\n    storefrontApiVersion,\n  }\n\n  return <DevToolsClient dataFromServer={{ settings }} />\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAElB,oBAA0B;AAC1B,mCAAiC;AACjC,6BAA2C;AAEpC,oBAAoB;AACzB,QAAM,gBAAgB,mDAAiB;AACvC,QAAM,EAAE,kBAAkB,cAAc;AACxC,QAAM;AAAA,IACJ,qBAAqB;AAAA,IACrB,oBAAoB;AAAA,IACpB;AAAA,IACA;AAAA,MACE,iBAAiB,CAAC;AACtB,QAAM,WAAW;AAAA,IACf,QAAQ,6BAAU,cAAc,WAAW;AAAA,IAC3C;AAAA,IACA;AAAA,EACF;AAEA,SAAO,mDAAC;AAAA,IAAe,gBAAgB,EAAE,SAAS;AAAA,GAAG;AACvD;",
+  "names": []
+}

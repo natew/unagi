@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/framework/plugins/unagiRscPlugin.ts"],
+  "sourcesContent": ["import reactServerDomVite from '@tamagui/unagi/vendor/react-server-dom-vite/plugin.js'\n\nimport { UNAGI_DEFAULT_SERVER_ENTRY, VIRTUAL_PROXY_UNAGI_ROUTES_ID } from './virtualFilesPlugin.js'\n\nexport default function (options?: any) {\n  return reactServerDomVite({\n    serverBuildEntries: [UNAGI_DEFAULT_SERVER_ENTRY, VIRTUAL_PROXY_UNAGI_ROUTES_ID],\n    isServerComponentImporterAllowed(importer: string, source: string) {\n      console.log('source', source)\n      return (\n        // Always allow the entry server (e.g. App.server.jsx) to be imported\n        // in other files such as worker.js or server.js.\n        source.includes(UNAGI_DEFAULT_SERVER_ENTRY) ||\n        /(index|entry-server|tamagui\\.config)\\.[jt]s/.test(importer) ||\n        // Support importing server components for testing\n        // TODO: revisit this when RSC splits into two bundles\n        /\\.test\\.[tj]sx?$/.test(importer)\n      )\n    },\n    ...options,\n  })\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBAA+B;AAE/B,gCAA0E;AAE3D,gCAAU,SAAe;AACtC,SAAO,2BAAmB;AAAA,IACxB,oBAAoB,CAAC,sDAA4B,uDAA6B;AAAA,IAC9E,iCAAiC,UAAkB,QAAgB;AACjE,cAAQ,IAAI,UAAU,MAAM;AAC5B,aAGE,OAAO,SAAS,oDAA0B,KAC1C,8CAA8C,KAAK,QAAQ,KAG3D,mBAAmB,KAAK,QAAQ;AAAA,IAEpC;AAAA,IACA,GAAG;AAAA,EACL,CAAC;AACH;",
+  "names": []
+}

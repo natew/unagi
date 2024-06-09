@@ -1,0 +1,1 @@
+{"version":3,"file":"virtualFilesPlugin.d.ts","sourceRoot":"","sources":["../../../src/framework/plugins/virtualFilesPlugin.ts"],"names":[],"mappings":"AAGA,OAAO,EAAE,MAAM,EAAgD,MAAM,MAAM,CAAA;AAE3E,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,aAAa,CAAA;AAGzD,eAAO,MAAM,0BAA0B,QAAsD,CAAA;AAW7F,eAAO,MAAM,6BAA6B,QAAkD,CAAA;AAI5F,eAAO,MAAM,6BAA6B,QAAkD,CAAA;wCAE7D,sBAAsB;AAArD,wBAkGC"}

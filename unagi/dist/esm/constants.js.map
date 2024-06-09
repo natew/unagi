@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/constants.ts"],
+  "sourcesContent": ["export const RSC_PATHNAME = '/__rsc'\nexport const EVENT_PATHNAME = '/__event'\nexport const EVENT_PATHNAME_REGEX = new RegExp(`^${EVENT_PATHNAME}/`)\n"],
+  "mappings": "AAAO,MAAM,eAAe;AACrB,MAAM,iBAAiB;AACvB,MAAM,uBAAuB,IAAI,OAAO,IAAI,iBAAiB;",
+  "names": []
+}

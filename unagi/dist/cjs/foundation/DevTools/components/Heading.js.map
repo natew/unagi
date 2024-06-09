@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/foundation/DevTools/components/Heading.tsx"],
+  "sourcesContent": ["import React from 'react'\n\nexport function Heading({\n  linkText,\n  url,\n  children,\n}: {\n  linkText?: string\n  url?: string\n  children: string\n}) {\n  return (\n    <span style={{ display: 'flex', alignItems: 'baseline', padding: '0 0 0em' }}>\n      <span style={{ paddingRight: '0em', flex: 1, fontWeight: 'bold' }}>{children} </span>\n      <a\n        style={{\n          color: 'blue',\n          fontFamily: 'monospace',\n          textDecoration: 'underline',\n        }}\n        href={url}\n      >\n        {linkText}\n      </a>\n    </span>\n  )\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAEX,iBAAiB;AAAA,EACtB;AAAA,EACA;AAAA,EACA;AAAA,GAKC;AACD,SACE,mDAAC;AAAA,IAAK,OAAO,EAAE,SAAS,QAAQ,YAAY,YAAY,SAAS,UAAU;AAAA,KACzE,mDAAC;AAAA,IAAK,OAAO,EAAE,cAAc,OAAO,MAAM,GAAG,YAAY,OAAO;AAAA,KAAI,UAAS,GAAC,GAC9E,mDAAC;AAAA,IACC,OAAO;AAAA,MACL,OAAO;AAAA,MACP,YAAY;AAAA,MACZ,gBAAgB;AAAA,IAClB;AAAA,IACA,MAAM;AAAA,KAEL,QACH,CACF;AAEJ;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/useRouteParams/RouteParamsProvider.client.tsx"],
+  "sourcesContent": ["import React, { FC, ReactNode, createContext, useContext } from 'react'\n\ntype RouteParamsContextValue = {\n  routeParams: Record<string, string>\n  basePath: string\n}\n\nexport const RouteParamsContext = createContext<RouteParamsContextValue>({\n  routeParams: {},\n  basePath: '/',\n})\n\nexport const RouteParamsProvider: FC<{\n  routeParams: Record<string, string>\n  basePath: string\n  children: ReactNode\n}> = ({ children, routeParams, basePath }) => {\n  return (\n    <RouteParamsContext.Provider value={{ routeParams, basePath }}>\n      {children}\n    </RouteParamsContext.Provider>\n  )\n}\n\nexport function useBasePath() {\n  const router = useContext(RouteParamsContext)\n  return router.basePath\n}\n"],
+  "mappings": "AAAA;AAOO,MAAM,qBAAqB,cAAuC;AAAA,EACvE,aAAa,CAAC;AAAA,EACd,UAAU;AACZ,CAAC;AAEM,MAAM,sBAIR,CAAC,EAAE,UAAU,aAAa,eAAe;AAC5C,SACE,oCAAC,mBAAmB,UAAnB;AAAA,IAA4B,OAAO,EAAE,aAAa,SAAS;AAAA,KACzD,QACH;AAEJ;AAEO,uBAAuB;AAC5B,QAAM,SAAS,WAAW,kBAAkB;AAC5C,SAAO,OAAO;AAChB;",
+  "names": []
+}

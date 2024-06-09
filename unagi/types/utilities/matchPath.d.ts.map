@@ -1,0 +1,1 @@
+{"version":3,"file":"matchPath.d.ts","sourceRoot":"","sources":["../../src/utilities/matchPath.ts"],"names":[],"mappings":"AAAA,OAAO,EAAO,qBAAqB,EAAgB,MAAM,gBAAgB,CAAA;AASzE,UAAU,gBAAiB,SAAQ,qBAAqB;IACtD,IAAI,CAAC,EAAE,MAAM,CAAA;IACb,KAAK,CAAC,EAAE,OAAO,CAAA;CAChB;AA0BD,wBAAgB,SAAS,CAAC,QAAQ,EAAE,MAAM,EAAE,OAAO,GAAE,gBAAqB,OAiCzE"}

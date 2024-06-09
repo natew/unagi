@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/foundation/DevTools/components/Table.tsx"],
+  "sourcesContent": ["import React from 'react';\n\ninterface Item {\n  key: string;\n  value: string;\n}\n\ninterface TableProps {\n  items: Item[];\n}\n\nexport function Table({items}: TableProps) {\n  const itemsMarkup = items.map(({key, value}) => (\n    <div\n      key={key}\n      style={{display: 'flex', paddingBottom: '1em', flexDirection: 'column'}}\n    >\n      <span style={{fontWeight: 'bold'}}>{key}</span>\n      <span style={{width: '70%', fontFamily: 'monospace'}}>{value}</span>\n    </div>\n  ));\n  return <ul>{itemsMarkup}</ul>;\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAWX,eAAe,EAAC,SAAoB;AACzC,QAAM,cAAc,MAAM,IAAI,CAAC,EAAC,KAAK,YACnC,mDAAC;AAAA,IACC;AAAA,IACA,OAAO,EAAC,SAAS,QAAQ,eAAe,OAAO,eAAe,SAAQ;AAAA,KAEtE,mDAAC;AAAA,IAAK,OAAO,EAAC,YAAY,OAAM;AAAA,KAAI,GAAI,GACxC,mDAAC;AAAA,IAAK,OAAO,EAAC,OAAO,OAAO,YAAY,YAAW;AAAA,KAAI,KAAM,CAC/D,CACD;AACD,SAAO,mDAAC,YAAI,WAAY;AAC1B;",
+  "names": []
+}

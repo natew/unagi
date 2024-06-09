@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/utilities/template.ts"],
+  "sourcesContent": ["/**\n * Strip out script `src` values from <script> tags in a given HTML template.\n * Returns two lists of scripts, split based on whether they are `type=\"module\"`.\n */\nexport function stripScriptsFromTemplate(template: string) {\n  const bootstrapScripts = [] as string[]\n  const bootstrapModules = [] as string[]\n\n  const scripts = template.matchAll(/<script\\n*?.+?src=\"(?<script>([^\"]+?))\"\\n*.*?><\\/script>/g)\n\n  for (const match of scripts) {\n    const scriptName = match.groups?.script\n\n    if (!scriptName) continue\n\n    if (match[0].includes(`type=\"module\"`)) {\n      bootstrapModules.push(scriptName)\n    } else {\n      bootstrapScripts.push(scriptName)\n    }\n\n    template = template.replace(match[0], '')\n  }\n\n  return { noScriptTemplate: template, bootstrapScripts, bootstrapModules }\n}\n"],
+  "mappings": "AAIO,kCAAkC,UAAkB;AAJ3D;AAKE,QAAM,mBAAmB,CAAC;AAC1B,QAAM,mBAAmB,CAAC;AAE1B,QAAM,UAAU,SAAS,SAAS,2DAA2D;AAE7F,aAAW,SAAS,SAAS;AAC3B,UAAM,aAAa,YAAM,WAAN,mBAAc;AAEjC,QAAI,CAAC;AAAY;AAEjB,QAAI,MAAM,GAAG,SAAS,eAAe,GAAG;AACtC,uBAAiB,KAAK,UAAU;AAAA,IAClC,OAAO;AACL,uBAAiB,KAAK,UAAU;AAAA,IAClC;AAEA,eAAW,SAAS,QAAQ,MAAM,IAAI,EAAE;AAAA,EAC1C;AAEA,SAAO,EAAE,kBAAkB,UAAU,kBAAkB,iBAAiB;AAC1E;",
+  "names": []
+}

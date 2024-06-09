@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/utilities/locale/locale.ts"],
+  "sourcesContent": ["import type { CountryCode, LanguageCode } from './types'\n\n/**\n * Calculates locale based on provided language and countryCode\n * 1. If language is extended with region, then hyphenate and use as locale\n * 2. Else merge language and countryCode\n */\nexport function getLocale(language?: `${LanguageCode}`, countryCode?: `${CountryCode}`) {\n  if (!language || !countryCode) {\n    return ''\n  }\n\n  if (isLanguageExtended(language)) {\n    return hyphenateLanguage(language)\n  }\n  return `${language}-${countryCode}`\n}\n\nfunction hyphenateLanguage(str: `${LanguageCode}`) {\n  return str.replace('_', '-')\n}\n\nfunction isLanguageExtended(str?: `${LanguageCode}`) {\n  if (!str) return false\n  return str.includes('_') || str.includes('-')\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAOO,mBAAmB,UAA8B,aAAgC;AACtF,MAAI,CAAC,YAAY,CAAC,aAAa;AAC7B,WAAO;AAAA,EACT;AAEA,MAAI,mBAAmB,QAAQ,GAAG;AAChC,WAAO,kBAAkB,QAAQ;AAAA,EACnC;AACA,SAAO,GAAG,YAAY;AACxB;AAEA,2BAA2B,KAAwB;AACjD,SAAO,IAAI,QAAQ,KAAK,GAAG;AAC7B;AAEA,4BAA4B,KAAyB;AACnD,MAAI,CAAC;AAAK,WAAO;AACjB,SAAO,IAAI,SAAS,GAAG,KAAK,IAAI,SAAS,GAAG;AAC9C;",
+  "names": []
+}

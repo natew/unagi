@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/utilities/locale/index.ts"],
+  "sourcesContent": ["export { getLocale } from './locale.js'\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBAA0B;",
+  "names": []
+}

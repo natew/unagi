@@ -1,0 +1,1 @@
+{"version":3,"file":"middlewarePlugin.d.ts","sourceRoot":"","sources":["../../src/vite/middlewarePlugin.ts"],"names":[],"mappings":"AAIA,OAAO,EAAE,MAAM,EAA2B,MAAM,MAAM,CAAA;AAStD,eAAO,MAAM,gBAAgB,kBAAmB,GAAG,WAgClD,CAAA;AAED,OAAO,CAAC,MAAM,CAAC;IAEb,IAAI,MAAM,EAAE;QAAE,GAAG,EAAE,GAAG,CAAC;QAAC,CAAC,GAAG,EAAE,MAAM,GAAG,GAAG,CAAA;KAAE,CAAA;CAC7C"}

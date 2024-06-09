@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/BuiltInRoutes/healthCheck.ts"],
+  "sourcesContent": ["export async function HealthCheck() {\n  return new Response(null, { status: 200 })\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,6BAAoC;AAClC,SAAO,IAAI,SAAS,MAAM,EAAE,QAAQ,IAAI,CAAC;AAC3C;",
+  "names": []
+}

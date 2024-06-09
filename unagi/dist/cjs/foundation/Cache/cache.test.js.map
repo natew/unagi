@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/Cache/cache.test.ts"],
+  "sourcesContent": ["import { generateSubRequestCacheControlHeader } from './cache-sub-request.js'\nimport { CacheNone, CacheShort } from './strategies/index.js'\n\ndescribe('generateSubRequestCacheControlHeader', () => {\n  it('generates CacheShort caching strategy by default', () => {\n    const header = generateSubRequestCacheControlHeader()\n\n    expect(header).toBe('public, max-age=1, stale-while-revalidate=9')\n  })\n\n  it('override to private', () => {\n    const header = generateSubRequestCacheControlHeader(\n      CacheShort({\n        mode: 'private',\n      })\n    )\n\n    expect(header).toBe('private, max-age=1, stale-while-revalidate=9')\n  })\n\n  it('supports no-store', () => {\n    const header = generateSubRequestCacheControlHeader(CacheNone())\n\n    expect(header).toBe('no-store')\n  })\n})\n"],
+  "mappings": ";AAAA,+BAAqD;AACrD,wBAAsC;AAEtC,SAAS,wCAAwC,MAAM;AACrD,KAAG,oDAAoD,MAAM;AAC3D,UAAM,SAAS,mEAAqC;AAEpD,WAAO,MAAM,EAAE,KAAK,6CAA6C;AAAA,EACnE,CAAC;AAED,KAAG,uBAAuB,MAAM;AAC9B,UAAM,SAAS,mEACb,kCAAW;AAAA,MACT,MAAM;AAAA,IACR,CAAC,CACH;AAEA,WAAO,MAAM,EAAE,KAAK,8CAA8C;AAAA,EACpE,CAAC;AAED,KAAG,qBAAqB,MAAM;AAC5B,UAAM,SAAS,mEAAqC,iCAAU,CAAC;AAE/D,WAAO,MAAM,EAAE,KAAK,UAAU;AAAA,EAChC,CAAC;AACH,CAAC;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/DevTools/DevTools.client.tsx"],
+  "sourcesContent": ["import React, { useCallback, useEffect, useState } from 'react'\n\nimport { Interface, Panels } from './components/index.js'\n\nexport function DevTools({ dataFromServer }: { dataFromServer: any }) {\n  const [open, setOpen] = useState(false)\n  const toggleOpen = useCallback(() => {\n    setOpen((state) => !state)\n  }, [])\n  const [hasMounted, setHasMounted] = useState(false)\n\n  useEffect(() => {\n    setHasMounted(true)\n  }, [])\n\n  if (hasMounted) {\n    return (\n      <Interface open={open} onClose={toggleOpen} onOpen={toggleOpen}>\n        <Panels {...dataFromServer} />\n      </Interface>\n    )\n  }\n\n  return null\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAwD;AAExD,wBAAkC;AAE3B,kBAAkB,EAAE,kBAA2C;AACpE,QAAM,CAAC,MAAM,WAAW,2BAAS,KAAK;AACtC,QAAM,aAAa,8BAAY,MAAM;AACnC,YAAQ,CAAC,UAAU,CAAC,KAAK;AAAA,EAC3B,GAAG,CAAC,CAAC;AACL,QAAM,CAAC,YAAY,iBAAiB,2BAAS,KAAK;AAElD,8BAAU,MAAM;AACd,kBAAc,IAAI;AAAA,EACpB,GAAG,CAAC,CAAC;AAEL,MAAI,YAAY;AACd,WACE,mDAAC;AAAA,MAAU;AAAA,MAAY,SAAS;AAAA,MAAY,QAAQ;AAAA,OAClD,mDAAC;AAAA,MAAQ,GAAG;AAAA,KAAgB,CAC9B;AAAA,EAEJ;AAEA,SAAO;AACT;",
+  "names": []
+}

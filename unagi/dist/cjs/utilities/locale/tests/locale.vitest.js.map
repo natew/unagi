@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/utilities/locale/tests/locale.vitest.ts"],
+  "sourcesContent": ["import {getLocale} from '../index.js';\n\ndescribe('locale', () => {\n  describe('getLocale', () => {\n    it('returns `language` as `locale` given a language with a subtag extensions', () => {\n      const countryCode = 'US';\n      const language = 'PT_BR';\n\n      const result = getLocale(language, countryCode);\n\n      expect(result).toBe('PT-BR');\n    });\n\n    it('returns `locale` as the merge of the `language` and `countryCode`', () => {\n      const countryCode = 'US';\n      const language = 'PT';\n\n      const result = getLocale(language, countryCode);\n\n      expect(result).toBe('PT-US');\n    });\n\n    it('returns empty string when `language` or `countryCode` as missing', () => {\n      const countryCode = 'US';\n\n      const result = getLocale(undefined, countryCode);\n\n      expect(result).toBe('');\n    });\n  });\n});\n"],
+  "mappings": ";AAAA,eAAwB;AAExB,SAAS,UAAU,MAAM;AACvB,WAAS,aAAa,MAAM;AAC1B,OAAG,4EAA4E,MAAM;AACnF,YAAM,cAAc;AACpB,YAAM,WAAW;AAEjB,YAAM,SAAS,wBAAU,UAAU,WAAW;AAE9C,aAAO,MAAM,EAAE,KAAK,OAAO;AAAA,IAC7B,CAAC;AAED,OAAG,qEAAqE,MAAM;AAC5E,YAAM,cAAc;AACpB,YAAM,WAAW;AAEjB,YAAM,SAAS,wBAAU,UAAU,WAAW;AAE9C,aAAO,MAAM,EAAE,KAAK,OAAO;AAAA,IAC7B,CAAC;AAED,OAAG,oEAAoE,MAAM;AAC3E,YAAM,cAAc;AAEpB,YAAM,SAAS,wBAAU,QAAW,WAAW;AAE/C,aAAO,MAAM,EAAE,KAAK,EAAE;AAAA,IACxB,CAAC;AAAA,EACH,CAAC;AACH,CAAC;",
+  "names": []
+}

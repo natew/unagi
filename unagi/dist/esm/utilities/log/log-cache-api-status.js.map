@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/utilities/log/log-cache-api-status.ts"],
+  "sourcesContent": ["import { gray } from 'kolorist'\n\nimport { log } from '.'\n\nexport function logCacheApiStatus(status: string | null, url: string) {\n  if (!log.options().showCacheApiStatus) {\n    return\n  }\n\n  let queryName: string | undefined\n  log.debug(gray(`[Cache] ${status?.padEnd(8)} ${queryName ? `query ${queryName}` : url}`))\n}\n"],
+  "mappings": "AAAA;AAEA;AAEO,2BAA2B,QAAuB,KAAa;AACpE,MAAI,CAAC,IAAI,QAAQ,EAAE,oBAAoB;AACrC;AAAA,EACF;AAEA,MAAI;AACJ,MAAI,MAAM,KAAK,WAAW,iCAAQ,OAAO,MAAM,YAAY,SAAS,cAAc,KAAK,CAAC;AAC1F;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/utilities/error.ts"],
+  "sourcesContent": ["export function getErrorMarkup(error: Error) {\n  return `<script type=\"module\">\n    import {ErrorOverlay} from '/@vite/client.js';\n    document.body.appendChild(new ErrorOverlay(${JSON.stringify(\n      error,\n      Object.getOwnPropertyNames(error)\n    ).replace(/</g, '\\\\u003c')}));\n</script>`\n}\n"],
+  "mappings": "AAAO,wBAAwB,OAAc;AAC3C,SAAO;AAAA;AAAA,iDAEwC,KAAK,UAChD,OACA,OAAO,oBAAoB,KAAK,CAClC,EAAE,QAAQ,MAAM,SAAS;AAAA;AAE7B;",
+  "names": []
+}

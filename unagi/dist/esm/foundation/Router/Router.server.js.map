@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/Router/Router.server.tsx"],
+  "sourcesContent": ["import React, { ReactElement } from 'react'\n\nimport { BrowserRouter } from './BrowserRouter.client.js'\n\ntype RouterProps = {\n  /** Any React elements. */\n  children: Array<ReactElement> | ReactElement\n}\n\n/**\n * The `Router` component provides the context for routing in your Hydrogen app.\n */\nexport function Router({ children }: RouterProps): ReactElement {\n  return <BrowserRouter>{children}</BrowserRouter>\n}\n"],
+  "mappings": "AAAA;AAEA;AAUO,gBAAgB,EAAE,YAAuC;AAC9D,SAAO,oCAAC,qBAAe,QAAS;AAClC;",
+  "names": []
+}

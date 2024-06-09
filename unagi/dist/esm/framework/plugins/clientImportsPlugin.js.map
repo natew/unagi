@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/framework/plugins/clientImportsPlugin.ts"],
+  "sourcesContent": ["import type { Plugin } from 'vite'\n\nexport default function clientImportsPlugin(): Plugin {\n  return {\n    name: 'unagi:client-imports',\n\n    enforce: 'pre',\n\n    /**\n     * When importer does not end in `server.jsx`, and source is `@tamagui/unagi`,\n     * replace with `@tamagui/unagi/client`. This prevents other server-only imports\n     * from \"leaking\" into the client bundle.\n     */\n    async resolveId(source, importer, { ssr }) {\n      console.log('resolving client', source, importer)\n      if (ssr) return\n      if (/\\.server\\.(j|t)sx?/.test(importer ?? '')) return\n      if ('@tamagui/unagi' !== source) return\n\n      const resolution = await this.resolve('@tamagui/unagi/client', importer, {\n        skipSelf: true,\n      })\n\n      if (resolution) {\n        return resolution.id\n      }\n    },\n  }\n}\n"],
+  "mappings": "AAEe,+BAAuC;AACpD,SAAO;AAAA,IACL,MAAM;AAAA,IAEN,SAAS;AAAA,IAOT,MAAM,UAAU,QAAQ,UAAU,EAAE,OAAO;AACzC,cAAQ,IAAI,oBAAoB,QAAQ,QAAQ;AAChD,UAAI;AAAK;AACT,UAAI,qBAAqB,KAAK,YAAY,EAAE;AAAG;AAC/C,UAAI,qBAAqB;AAAQ;AAEjC,YAAM,aAAa,MAAM,KAAK,QAAQ,yBAAyB,UAAU;AAAA,QACvE,UAAU;AAAA,MACZ,CAAC;AAED,UAAI,YAAY;AACd,eAAO,WAAW;AAAA,MACpB;AAAA,IACF;AAAA,EACF;AACF;",
+  "names": []
+}

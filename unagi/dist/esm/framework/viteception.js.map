@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/framework/viteception.ts"],
+  "sourcesContent": ["import { InlineConfig, createServer } from 'vite'\n\nexport async function viteception(paths: string[], options?: InlineConfig) {\n  const isWorker = process.env.WORKER\n  delete process.env.WORKER\n\n  const server = await createServer({\n    clearScreen: false,\n    server: { middlewareMode: 'ssr' },\n    ...options,\n  })\n\n  if (isWorker) {\n    process.env.WORKER = isWorker\n  }\n\n  const loaded = await Promise.all(paths.map((path) => server.ssrLoadModule(path)))\n\n  await server.close()\n\n  return { server, loaded }\n}\n"],
+  "mappings": "AAAA;AAEA,2BAAkC,OAAiB,SAAwB;AACzE,QAAM,WAAW,QAAQ,IAAI;AAC7B,SAAO,QAAQ,IAAI;AAEnB,QAAM,SAAS,MAAM,aAAa;AAAA,IAChC,aAAa;AAAA,IACb,QAAQ,EAAE,gBAAgB,MAAM;AAAA,IAChC,GAAG;AAAA,EACL,CAAC;AAED,MAAI,UAAU;AACZ,YAAQ,IAAI,SAAS;AAAA,EACvB;AAEA,QAAM,SAAS,MAAM,QAAQ,IAAI,MAAM,IAAI,CAAC,SAAS,OAAO,cAAc,IAAI,CAAC,CAAC;AAEhF,QAAM,OAAO,MAAM;AAEnB,SAAO,EAAE,QAAQ,OAAO;AAC1B;",
+  "names": []
+}

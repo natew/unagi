@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/foundation/DevTools/components/Settings.client.tsx"],
+  "sourcesContent": ["import React from 'react'\n\nimport { Locale } from '../../ShopifyProvider/types.js'\nimport { Table } from './Table.js'\n\ninterface Props {\n  locale: Locale\n  storeDomain: string\n  storefrontApiVersion: string\n}\n\nconst KEY_MAP = {\n  locale: 'Locale',\n  storeDomain: 'Domain',\n  storefrontApiVersion: 'API Version',\n}\n\nexport function Settings(props: Props) {\n  const items = Object.entries(props).map(([key, value]) => {\n    return {\n      key: KEY_MAP[key as keyof typeof KEY_MAP],\n      value,\n      type: typeof value,\n    }\n  })\n\n  return <Table items={items} />\n}\n"],
+  "mappings": "AAAA;AAGA;AAQA,MAAM,UAAU;AAAA,EACd,QAAQ;AAAA,EACR,aAAa;AAAA,EACb,sBAAsB;AACxB;AAEO,kBAAkB,OAAc;AACrC,QAAM,QAAQ,OAAO,QAAQ,KAAK,EAAE,IAAI,CAAC,CAAC,KAAK,WAAW;AACxD,WAAO;AAAA,MACL,KAAK,QAAQ;AAAA,MACb;AAAA,MACA,MAAM,OAAO;AAAA,IACf;AAAA,EACF,CAAC;AAED,SAAO,oCAAC;AAAA,IAAM;AAAA,GAAc;AAC9B;",
+  "names": []
+}

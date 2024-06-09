@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/utilities/devtools.ts"],
+  "sourcesContent": ["import type { ViteDevServer } from 'vite'\n\nexport type DevServerMessage =\n  | {\n      type: 'warn'\n      data: string\n    }\n  | {\n      type: 'error'\n      data: { message: string; stack: string }\n    }\n\nexport function sendMessageToClient(\n  client: 'browser-console' | 'dev-tools' = 'browser-console',\n  payload: DevServerMessage\n) {\n  // @ts-ignore\n  const devServer = globalThis.__viteDevServer as ViteDevServer\n\n  if (devServer) {\n    devServer.ws.send({\n      type: 'custom',\n      event: `hydrogen-${client}`,\n      data: payload,\n    })\n  }\n}\n"],
+  "mappings": "AAYO,6BACL,SAA0C,mBAC1C,SACA;AAEA,QAAM,YAAY,WAAW;AAE7B,MAAI,WAAW;AACb,cAAU,GAAG,KAAK;AAAA,MAChB,MAAM;AAAA,MACN,OAAO,YAAY;AAAA,MACnB,MAAM;AAAA,IACR,CAAC;AAAA,EACH;AACF;",
+  "names": []
+}

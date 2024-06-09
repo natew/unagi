@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/utilities/timing.ts"],
+  "sourcesContent": ["/**\n * Not all environments have access to Performance.now(). This is to prevent\n * timing side channel attacks.\n *\n * See: https://community.cloudflare.com/t/cloudflare-workers-how-do-i-measure-execution-time-of-my-method/69672\n */\nexport function getTime() {\n  if (typeof performance !== 'undefined' && performance.now) {\n    return performance.now()\n  } else {\n    return Date.now()\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAMO,mBAAmB;AACxB,MAAI,OAAO,gBAAgB,eAAe,YAAY,KAAK;AACzD,WAAO,YAAY,IAAI;AAAA,EACzB,OAAO;AACL,WAAO,KAAK,IAAI;AAAA,EAClB;AACF;",
+  "names": []
+}

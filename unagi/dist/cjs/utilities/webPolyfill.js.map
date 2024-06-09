@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/utilities/webPolyfill.ts"],
+  "sourcesContent": ["import AbortController from 'abort-controller'\nimport fetch, { FormData, Headers, Request, Response } from 'undici'\nimport { ReadableStream, TransformStream, WritableStream } from 'web-streams-polyfill/ponyfill'\n\nif (!globalThis.fetch) {\n  Object.assign(globalThis, {\n    fetch,\n    Request,\n    Response,\n    Headers,\n    AbortController,\n  })\n}\n\nif (!globalThis.FormData) {\n  Object.assign(globalThis, {\n    FormData,\n  })\n}\n\nif (!globalThis.ReadableStream) {\n  Object.assign(globalThis, {\n    ReadableStream,\n    WritableStream,\n    TransformStream,\n  })\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;AAAA,8BAA4B;AAC5B,oBAA4D;AAC5D,sBAAgE;AAEhE,IAAI,CAAC,WAAW,OAAO;AACrB,SAAO,OAAO,YAAY;AAAA,IACxB;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF,CAAC;AACH;AAEA,IAAI,CAAC,WAAW,UAAU;AACxB,SAAO,OAAO,YAAY;AAAA,IACxB;AAAA,EACF,CAAC;AACH;AAEA,IAAI,CAAC,WAAW,gBAAgB;AAC9B,SAAO,OAAO,YAAY;AAAA,IACxB;AAAA,IACA;AAAA,IACA;AAAA,EACF,CAAC;AACH;",
+  "names": []
+}

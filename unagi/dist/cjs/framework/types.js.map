@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/framework/types.ts"],
+  "sourcesContent": ["import type { IncomingMessage, ServerResponse } from 'http'\n\nimport { SessionStorageAdapter } from '../foundation/session/session-types'\n\nexport type UnagiVitePluginOptions = {\n  devCache?: boolean\n  purgeQueryCacheOnBuild?: boolean\n  configPath?: string\n  optimizeBoundaries?: boolean | 'build'\n  experimental?: {\n    css: 'global' | 'modules-only'\n  }\n}\n\nexport interface RuntimeContext {\n  waitUntil: (fn: Promise<any>) => void\n}\n\nexport interface RequestHandlerOptions {\n  indexTemplate: string | ((url: string) => Promise<string | { default: string }>)\n  cache?: Cache\n  streamableResponse?: ServerResponse\n  dev?: boolean\n  context?: RuntimeContext\n  nonce?: string\n  buyerIpHeader?: string\n  sessionApi?: SessionStorageAdapter\n  headers?: Headers\n}\n\nexport interface RequestHandler {\n  (request: Request | IncomingMessage, options: RequestHandlerOptions): Promise<\n    Response | undefined\n  >\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
+  "names": []
+}

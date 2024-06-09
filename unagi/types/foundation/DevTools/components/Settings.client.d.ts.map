@@ -1,0 +1,1 @@
+{"version":3,"file":"Settings.client.d.ts","sourceRoot":"","sources":["../../../../src/foundation/DevTools/components/Settings.client.tsx"],"names":[],"mappings":";AAEA,OAAO,EAAE,MAAM,EAAE,MAAM,gCAAgC,CAAA;AAGvD,UAAU,KAAK;IACb,MAAM,EAAE,MAAM,CAAA;IACd,WAAW,EAAE,MAAM,CAAA;IACnB,oBAAoB,EAAE,MAAM,CAAA;CAC7B;AAQD,wBAAgB,QAAQ,CAAC,KAAK,EAAE,KAAK,eAUpC"}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/Redirect/Redirect.client.tsx"],
+  "sourcesContent": ["import { useEffect } from 'react'\n\nimport { useNavigate } from '../../foundation/useNavigate/useNavigate.js'\n\ntype RedirectProps = {\n  to: string\n}\n\nexport default function Redirect({ to }: RedirectProps) {\n  const navigate = useNavigate()\n\n  useEffect(() => {\n    if (to.startsWith('http')) {\n      window.location.href = to\n    } else {\n      navigate(to)\n    }\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [])\n\n  return null\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAA0B;AAE1B,yBAA4B;AAMb,kBAAkB,EAAE,MAAqB;AACtD,QAAM,WAAW,oCAAY;AAE7B,8BAAU,MAAM;AACd,QAAI,GAAG,WAAW,MAAM,GAAG;AACzB,aAAO,SAAS,OAAO;AAAA,IACzB,OAAO;AACL,eAAS,EAAE;AAAA,IACb;AAAA,EAEF,GAAG,CAAC,CAAC;AAEL,SAAO;AACT;",
+  "names": []
+}

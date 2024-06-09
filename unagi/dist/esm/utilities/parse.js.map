@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/utilities/parse.ts"],
+  "sourcesContent": ["export function parseJSON(json: any) {\n  if (String(json).includes('__proto__')) return JSON.parse(json, noproto);\n  return JSON.parse(json);\n}\nfunction noproto(k: string, v: string) {\n  if (k !== '__proto__') return v;\n}\n"],
+  "mappings": "AAAO,mBAAmB,MAAW;AACnC,MAAI,OAAO,IAAI,EAAE,SAAS,WAAW;AAAG,WAAO,KAAK,MAAM,MAAM,OAAO;AACvE,SAAO,KAAK,MAAM,IAAI;AACxB;AACA,iBAAiB,GAAW,GAAW;AACrC,MAAI,MAAM;AAAa,WAAO;AAChC;",
+  "names": []
+}

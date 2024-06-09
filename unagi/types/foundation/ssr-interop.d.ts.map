@@ -1,0 +1,1 @@
+{"version":3,"file":"ssr-interop.d.ts","sourceRoot":"","sources":["../../src/foundation/ssr-interop.ts"],"names":[],"mappings":"AASA,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,uCAAuC,CAAA;AAKzE,eAAO,MAAM,YAAY,QAAQ,CAAA;AAEjC,aAAK,YAAY,CAAC,CAAC,IAAI,CAAC,OAAO,EAAE,YAAY,KAAK,CAAC,CAAA;AAsBnD,wBAAgB,aAAa,CAAC,CAAC,EAAE,YAAY,EAAE,YAAY,CAAC,CAAC,CAAC,EAAE,cAAc,CAAC,EAAE,GAAG,KAMnF"}

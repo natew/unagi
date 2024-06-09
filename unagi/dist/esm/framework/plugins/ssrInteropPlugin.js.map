@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/framework/plugins/ssrInteropPlugin.ts"],
+  "sourcesContent": ["import type { Plugin } from 'vite'\n\nexport default () => {\n  return {\n    name: 'vite-plugin-ssr-interop',\n    enforce: 'pre',\n    transform(code, id, options = {}) {\n      if (options.ssr && id.includes('foundation/ssr-interop')) {\n        return {\n          code: code\n            .replace(/(\\s*META_ENV_SSR\\s*=\\s*)false/, '$1import.meta.env.SSR')\n            .replace(/\\/\\/@SSR\\s*/g, ''),\n          map: { mappings: '' },\n        }\n      }\n    },\n  } as Plugin\n}\n"],
+  "mappings": "AAEA,IAAO,2BAAQ,MAAM;AACnB,SAAO;AAAA,IACL,MAAM;AAAA,IACN,SAAS;AAAA,IACT,UAAU,MAAM,IAAI,UAAU,CAAC,GAAG;AAChC,UAAI,QAAQ,OAAO,GAAG,SAAS,wBAAwB,GAAG;AACxD,eAAO;AAAA,UACL,MAAM,KACH,QAAQ,iCAAiC,uBAAuB,EAChE,QAAQ,gBAAgB,EAAE;AAAA,UAC7B,KAAK,EAAE,UAAU,GAAG;AAAA,QACtB;AAAA,MACF;AAAA,IACF;AAAA,EACF;AACF;",
+  "names": []
+}

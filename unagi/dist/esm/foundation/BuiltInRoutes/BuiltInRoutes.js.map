@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/BuiltInRoutes/BuiltInRoutes.ts"],
+  "sourcesContent": ["// import { EVENT_PATHNAME, EVENT_PATHNAME_REGEX } from '../../constants.js'\nimport { ResourceGetter } from '../../utilities/apiRoutes.js'\n// import { ServerAnalyticsRoute } from '../Analytics/ServerAnalyticsRoute.js'\nimport { HealthCheck } from './healthCheck.js'\n\ntype BuiltInRoute = {\n  pathname?: string\n  regex?: RegExp\n  resource: ResourceGetter\n}\n\nconst builtInRoutes: Array<BuiltInRoute> = [\n  // {\n  //   pathname: EVENT_PATHNAME,\n  //   regex: EVENT_PATHNAME_REGEX,\n  //   resource: ServerAnalyticsRoute,\n  // },\n  {\n    pathname: '/__health',\n    resource: HealthCheck,\n  },\n]\n\nexport function getBuiltInRoute(url: URL): ResourceGetter | null {\n  for (const route of builtInRoutes) {\n    if (url.pathname === route.pathname || (route.regex && route.regex.test(url.pathname))) {\n      return route.resource\n    }\n  }\n  return null\n}\n"],
+  "mappings": "AAGA;AAQA,MAAM,gBAAqC;AAAA,EAMzC;AAAA,IACE,UAAU;AAAA,IACV,UAAU;AAAA,EACZ;AACF;AAEO,yBAAyB,KAAiC;AAC/D,aAAW,SAAS,eAAe;AACjC,QAAI,IAAI,aAAa,MAAM,YAAa,MAAM,SAAS,MAAM,MAAM,KAAK,IAAI,QAAQ,GAAI;AACtF,aAAO,MAAM;AAAA,IACf;AAAA,EACF;AACA,SAAO;AACT;",
+  "names": []
+}

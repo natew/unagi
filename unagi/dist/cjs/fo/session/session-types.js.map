@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/fo/session/session-types.ts"],
+  "sourcesContent": ["export type SessionSyncApi = {\n  get: () => Record<string, string>\n}\n\nexport type SessionApi = {\n  get: () => Promise<Record<string, string>>\n  set: (key: string, value: string) => Promise<void>\n  destroy: () => Promise<void>\n}\n\nexport type SessionStorageAdapter = {\n  get: (request: Request) => Promise<Record<string, string>>\n  set: (request: Request, value: Record<string, string>) => Promise<string>\n  destroy: (request: Request) => Promise<string>\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
+  "names": []
+}

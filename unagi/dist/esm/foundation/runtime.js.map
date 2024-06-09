@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/foundation/runtime.ts"],
+  "sourcesContent": ["// eslint-disable-next-line @typescript-eslint/no-namespace\ndeclare namespace globalThis {\n  let __cache: Cache | undefined\n}\n\nexport function setCache(cache?: Cache) {\n  globalThis.__cache = cache\n}\n\nexport function getCache(): Cache | undefined {\n  return globalThis.__cache\n}\n"],
+  "mappings": "AAKO,kBAAkB,OAAe;AACtC,aAAW,UAAU;AACvB;AAEO,oBAAuC;AAC5C,SAAO,WAAW;AACpB;",
+  "names": []
+}

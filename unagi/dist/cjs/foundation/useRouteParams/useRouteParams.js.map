@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/useRouteParams/useRouteParams.tsx"],
+  "sourcesContent": ["import { useEnvContext } from '../ssrInterop.js'\nimport { RouteParamsContext } from './RouteParamsProvider.client.js'\n\n/**\n *  The `useRouteParams` hook retrieves the parameters of an active route. The hook is available in both server and client components.\n */\nexport function useRouteParams() {\n  const router = useEnvContext((req) => req.ctx.router, RouteParamsContext)\n  return router.routeParams\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,wBAA8B;AAC9B,wCAAmC;AAK5B,0BAA0B;AAC/B,QAAM,SAAS,qCAAc,CAAC,QAAQ,IAAI,IAAI,QAAQ,oDAAkB;AACxE,SAAO,OAAO;AAChB;",
+  "names": []
+}

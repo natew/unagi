@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/index.ts"],
+  "sourcesContent": ["export { Router } from './foundation/Router/Router.server.js'\nexport { FileRoutes } from './foundation/FileRoutes/FileRoutes.server.js'\n"],
+  "mappings": "AAAA;AACA;",
+  "names": []
+}

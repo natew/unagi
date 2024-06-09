@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/utilities/hash.ts"],
+  "sourcesContent": ["import type { QueryKey } from '../types.js'\n\nexport function hashKey(queryKey: QueryKey): string {\n  const rawKeys = Array.isArray(queryKey) ? queryKey : [queryKey]\n  let hash = ''\n\n  // Keys from useShopQuery are in the following shape:\n  // ['prefix', 'api-endpoint', {body:'query',headers:{}}]\n  // Since the API endpoint already contains the shop domain and api version,\n  // we can ignore the headers and only use the `body` from the payload.\n  for (const key of rawKeys) {\n    if (key != null) {\n      if (typeof key === 'object') {\n        // Queries from useQuery might not have a `body`. In that case,\n        // fallback to a safer (but slower) stringify.\n        if (!!key.body && typeof key.body === 'string') {\n          hash += key.body\n        } else {\n          hash += JSON.stringify(key)\n        }\n      } else {\n        hash += key\n      }\n    }\n  }\n\n  return hash\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEO,iBAAiB,UAA4B;AAClD,QAAM,UAAU,MAAM,QAAQ,QAAQ,IAAI,WAAW,CAAC,QAAQ;AAC9D,MAAI,OAAO;AAMX,aAAW,OAAO,SAAS;AACzB,QAAI,OAAO,MAAM;AACf,UAAI,OAAO,QAAQ,UAAU;AAG3B,YAAI,CAAC,CAAC,IAAI,QAAQ,OAAO,IAAI,SAAS,UAAU;AAC9C,kBAAQ,IAAI;AAAA,QACd,OAAO;AACL,kBAAQ,KAAK,UAAU,GAAG;AAAA,QAC5B;AAAA,MACF,OAAO;AACL,gBAAQ;AAAA,MACV;AAAA,IACF;AAAA,EACF;AAEA,SAAO;AACT;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/useServerProps/index.ts"],
+  "sourcesContent": ["export { useServerProps } from './use-server-props.js'\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,8BAA+B;",
+  "names": []
+}

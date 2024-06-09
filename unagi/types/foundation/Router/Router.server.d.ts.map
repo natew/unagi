@@ -1,0 +1,1 @@
+{"version":3,"file":"Router.server.d.ts","sourceRoot":"","sources":["../../../src/foundation/Router/Router.server.tsx"],"names":[],"mappings":"AAAA,OAAc,EAAE,YAAY,EAAE,MAAM,OAAO,CAAA;AAI3C,aAAK,WAAW,GAAG;IAEjB,QAAQ,EAAE,KAAK,CAAC,YAAY,CAAC,GAAG,YAAY,CAAA;CAC7C,CAAA;AAKD,wBAAgB,MAAM,CAAC,EAAE,QAAQ,EAAE,EAAE,WAAW,GAAG,YAAY,CAE9D"}

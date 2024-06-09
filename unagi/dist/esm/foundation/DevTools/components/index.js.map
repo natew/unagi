@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/foundation/DevTools/components/index.ts"],
+  "sourcesContent": ["export { Interface } from './Interface.client.js'\nexport { Panels } from './Panels.js'\n"],
+  "mappings": "AAAA;AACA;",
+  "names": []
+}

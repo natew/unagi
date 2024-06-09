@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/foundation/useQuery/index.ts"],
+  "sourcesContent": ["export { useQuery, type UnagiUseQueryOptions, shouldPreloadQuery } from './hooks.js'\n"],
+  "mappings": "AAAA;",
+  "names": []
+}

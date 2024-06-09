@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/utilities/html-encoding.ts"],
+  "sourcesContent": ["export function htmlEncode(html: string) {\n  return html\n    .replace(/&/g, '&amp;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;')\n    .replace(/\"/g, '&quot;')\n    .replace(/'/g, '&#39;')\n}\n"],
+  "mappings": "AAAO,oBAAoB,MAAc;AACvC,SAAO,KACJ,QAAQ,MAAM,OAAO,EACrB,QAAQ,MAAM,MAAM,EACpB,QAAQ,MAAM,MAAM,EACpB,QAAQ,MAAM,QAAQ,EACtB,QAAQ,MAAM,OAAO;AAC1B;",
+  "names": []
+}
